@@ -1,0 +1,15 @@
+D:\LinuxShared\project\trunk\common\bin\android\ARM\Debug\Android1.apk.recipe
+D:\LinuxShared\project\trunk\common\bin\android\ARM\Debug\Android1.apk.recipe.merged
+D:\LinuxShared\project\trunk\common\bin\android\ARM\Debug\Package\libs\armeabi-v7a\libAndroid1.so
+D:\LinuxShared\project\trunk\common\bin\android\ARM\Debug\Package\libs\armeabi-v7a\gdbserver
+D:\LinuxShared\project\trunk\common\bin\android\ARM\Debug\Package\libs\armeabi-v7a\libc++_shared.so
+D:\LinuxShared\project\trunk\common\bin\android\ARM\Debug\Package\res\values\strings.xml
+D:\LinuxShared\project\trunk\common\bin\android\ARM\Debug\Package\AndroidManifest.xml
+D:\LinuxShared\project\trunk\common\bin\android\ARM\Debug\Package\project.properties
+D:\LinuxShared\project\trunk\common\bin\android\ARM\Debug\Package\build.xml
+D:\LinuxShared\project\trunk\common\bin\android\ARM\Debug\Android1.apk
+D:\LinuxShared\project\trunk\common\bin\android\ARM\Debug\Android1.lastsuccessfuldeploy
+D:\LinuxShared\project\trunk\common\bin\android\Android1\Android1.Packaging\ARM\Debug\FileStringReplace.incremental
+D:\LinuxShared\project\trunk\common\bin\android\ARM\Debug\Package\libs\armeabi-v7a\libgnustl_static.a
+D:\LinuxShared\project\trunk\common\bin\android\ARM\Debug\Package\libs\armeabi-v7a\libandroid_vs.so
+D:\LinuxShared\project\trunk\common\bin\android\ARM\Debug\Package\libs\armeabi-v7a\libandroid_vs.a
