@@ -4,7 +4,7 @@
 #include <mutex>
 
 #include "webrtc/modules/audio_processing/include/audio_processing.h"
-#include "webrtc/common_audio/wav_file.h"
+
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "AndroidProject1.NativeActivity", __VA_ARGS__))
 #define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "AndroidProject1.NativeActivity", __VA_ARGS__))
 
@@ -63,10 +63,7 @@ private:
     typedef std::lock_guard<std::mutex> lock_guard;
 
     AudioProcessing* processing;
-    WavWriter* wav_rec_src;
-    WavWriter* wav_rec_pro;
-    WavWriter* wav_ply_pro;
-    WavReader* wav_ply;
     size_t sample_rate_;
     size_t channels_;
+
 };

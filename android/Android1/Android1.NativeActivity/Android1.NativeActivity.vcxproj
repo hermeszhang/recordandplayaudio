@@ -157,11 +157,11 @@
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <DebugInformationFormat>FullDebug</DebugInformationFormat>
       <PreprocessorDefinitions>WEBRTC_ANDROID;WEBRTC_LINUX;WEBRTC_POSIX;</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\LinuxShared\project\trunk\3rd\audio_processing\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\github\recordandplayaudio\audio_processing\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <LibraryDependencies>android_vs;%(LibraryDependencies);GLESv1_CM;EGL;OpenSLES;m;</LibraryDependencies>
-      <AdditionalLibraryDirectories>D:\LinuxShared\project\trunk\common\bin\android\ARM\Debug;%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainVersion)\$(PlatformShortName);$(StlLibraryPath)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\github\recordandplayaudio\android\ARM\Debug;%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainVersion)\$(PlatformShortName);$(StlLibraryPath)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -220,6 +220,7 @@
     <ClInclude Include="opensl_device.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="android_native_app_glue.h" />
+    <ClInclude Include="wavefile.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="android_native_app_glue.c" />
@@ -231,11 +232,7 @@
       <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</RuntimeTypeInfo>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\3rd\audio_processing\android_vs\android_vs.vcxproj">
-      <Project>{6d569838-f841-48f2-809b-9e832add2f82}</Project>
-    </ProjectReference>
+    <ClCompile Include="wavefile.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

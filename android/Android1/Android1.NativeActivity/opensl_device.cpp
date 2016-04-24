@@ -398,7 +398,15 @@ bool OpenSLDevice::StartPlayOut()
     playing_ = true;
     for ( int i = 0; i < kNumBuffer; ++i )
     {
-        EnqueuePlayoutData();
+        //EnqueuePlayoutData();
+        // Enqueue the decoded audio buffer for playback.
+        SLint16* buffer = outputBuffer[currentOutputBuffer];
+        SLresult err = ( *bqPlayerBufferQueue )->Enqueue( bqPlayerBufferQueue, buffer, outBufSamples * 2 );
+        if ( SL_RESULT_SUCCESS != err )
+        {
+            LOGW( "add playout data fail,err=%d", err );
+        }
+        currentOutputBuffer = ( currentOutputBuffer + 1 ) % kNumBuffer;
     }
     LOGW( "OpenSLDevice::StartPlayOut() leave" );
 
@@ -425,7 +433,13 @@ bool OpenSLDevice::StartRecording()
     recording_ = true;
     for ( int i = 0; i < kNumBuffer; ++i )
     {
-        EnqueueRecordData();
+        SLint16* buffer = inputBuffer[currentInputBuffer];
+        SLresult err = ( *recorderBufferQueue )->Enqueue( recorderBufferQueue, buffer, inBufSamples * sizeof( SLint16 ) );
+        if ( SL_RESULT_SUCCESS != err )
+        {
+            LOGW( "get recording data fail,err=%d", err );
+        }
+        currentInputBuffer = ( currentInputBuffer + 1 ) % kNumBuffer;
     }
     LOGW( "OpenSLDevice::StartRecording() leave" );
     return true;
